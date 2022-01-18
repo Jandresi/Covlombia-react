@@ -1,0 +1,24 @@
+.navegacion {
+    background: rgb(255,205,0);
+    background: linear-gradient(128deg, rgba(255,205,0,1) 42%, rgba(0,48,135,1) 47%, rgba(0,48,135,1) 70%, rgba(200,16,46,1) 75%, rgba(200,16,46,1) 100%);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.link {
+    color: #ffff;
+    text-decoration: none;
+    margin: 0 5%;
+    font-size: 16pt;
+    font-weight: 700;
+    padding-left: auto;
+    padding-bottom: 5px;
+}
+
+.link:hover {
+    color: #ffff;
+    padding-bottom: 0px;
+    border-bottom: solid 5px #ffff;
+    transition: 0.3s;
+}
