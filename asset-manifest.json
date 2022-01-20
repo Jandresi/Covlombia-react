@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/covlombia-react/static/css/main.0f4abd8d.css",
+    "main.js": "/covlombia-react/static/js/main.cd7b7b06.js",
+    "index.html": "/covlombia-react/index.html",
+    "main.0f4abd8d.css.map": "/covlombia-react/static/css/main.0f4abd8d.css.map",
+    "main.cd7b7b06.js.map": "/covlombia-react/static/js/main.cd7b7b06.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f4abd8d.css",
+    "static/js/main.cd7b7b06.js"
+  ]
+}
