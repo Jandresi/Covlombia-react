@@ -43,10 +43,6 @@
     background-color: red;
 }
 
-#porFechas {
-    max-height: 400px;
-}
-
 .grid {
     display: flex;
     justify-content: space-around;
@@ -61,4 +57,12 @@
 
 .mediano {
     min-width: 60%;
+}
+
+#porFechas {
+    min-height: 300px;
+}
+
+#porEdades {
+    min-height: 250px;
 }

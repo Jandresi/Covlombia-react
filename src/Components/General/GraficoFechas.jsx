@@ -65,6 +65,13 @@ const GraficoFechas = () => {
             type='bar'
             data={chartData}
             options={{
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'right',
+                    }
+                },
                 scales: {
                     y: {
                         type: 'logarithmic'

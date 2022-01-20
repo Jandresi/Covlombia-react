@@ -76,9 +76,17 @@ const GraficoEdades = () => {
             type='bar'
             data={chartData}
             options={{
-                scales: {
-                    y: {
-                        type: 'logarithmic'
+                indexAxis: 'y',
+                elements: {
+                    bar: {
+                        borderWidth: 2,
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'right',
                     }
                 }
             }}
