@@ -15,7 +15,7 @@ function App() {
       </header>
 
         <Routes>
-          <Route path="/" element={<General />} />
+          <Route path="/Covlombia-react" element={<General />} />
         </Routes>
     </Router>
   );
