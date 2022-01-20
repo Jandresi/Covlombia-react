@@ -3,9 +3,9 @@ import 'chart.js/auto';
 import { Chart } from 'react-chartjs-2';
 
 const GraficoEdades = () => {
-    let edades = ["0 - 5", "6 - 11", "12 - 18", "14 - 26", "27 - 59", "Mayor de 60"];
+    let edades = ["0 a 5 años", "6 a 11 años", "12 a 18 años", "19 a 26 años", "27 a 59 años", "Mayor de 60"];
     let nombreEdades = ["Bebés", "Infantes", "Adolescentes", "Jóvenes", "Adultos", "Adultos mayores"];
-    let contarEdad = [];
+    let contarEdad = [0, 0, 0, 0, 0, 0];
 
     const[data, setData] = React.useState([]);
     const [chartData, setChartData] = React.useState({
@@ -28,15 +28,41 @@ const GraficoEdades = () => {
     const ordenarEdades = () => {
         try {
             data.filter(res => {
-                
+                if(res.edad >= 0 && res.edad < 6) {
+                    contarEdad[0]++
+                } else if(res.edad >= 6 && res.edad < 12) {
+                    contarEdad[1]++
+                } else if(res.edad >= 12 && res.edad < 19) {
+                    contarEdad[2]++
+                } else if(res.edad >= 19 && res.edad < 27) {
+                    contarEdad[3]++
+                } else if(res.edad >= 27 && res.edad < 59) {
+                    contarEdad[4]++
+                } else if(res.edad >= 60) {
+                    contarEdad[5]++
+                }
             });
             setChartData({
                 labels: edades,
                 datasets: [{
-                    label: nombreEdades,
+                    label: "Grupo etario",
                     data: contarEdad,
-                    backgroundColor: ['rgba(255, 99, 132, 1)'],
-                    borderColor: ['rgba(255, 99, 132, 1)']
+                    backgroundColor: [
+                        'rgba(129, 212, 238, 1)',
+                        'rgba(255, 234, 0, 1)',
+                        'rgba(255, 149, 0, 1)',
+                        'rgba(200, 107, 250, 1)',
+                        'rgba(92, 0, 153, 1)',
+                        'rgba(0, 63, 136, 1)'
+                ],
+                    borderColor: [
+                        'rgba(129, 212, 238, 1)',
+                        'rgba(255, 234, 0, 1)',
+                        'rgba(255, 149, 0, 1)',
+                        'rgba(200, 107, 250, 1)',
+                        'rgba(92, 0, 153, 1)',
+                        'rgba(0, 63, 136, 1)'
+                ]
                 }]
             });
         } catch (e) {

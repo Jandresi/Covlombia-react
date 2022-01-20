@@ -6,6 +6,11 @@
     padding: 10px;
 }
 
+.titulo {
+    -webkit-text-stroke: 2px black;
+    color: #ffff; 
+}
+
 .link {
     color: #ffff;
     text-decoration: none;

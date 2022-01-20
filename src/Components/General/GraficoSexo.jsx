@@ -41,12 +41,12 @@ const GraficoSexo = () => {
                     label: "Casos por fecha",
                     data: [sexo[0], sexo[1]],
                     backgroundColor: [
-                        'rgba(129, 212, 238, 0.7)',
-                        'rgba(255, 99, 132, 0.7)'
+                        'rgba(129, 212, 238, 0.8)',
+                        'rgba(255, 99, 132, 0.8)'
                     ],
                     borderColor: [
-                        'rgba(129, 212, 238, 0.7)',
-                        'rgba(255, 99, 132, 0.7)'
+                        'rgba(129, 212, 238, 0.8)',
+                        'rgba(255, 99, 132, 0.8)'
                     ],
                 }]
             });
@@ -63,7 +63,6 @@ const GraficoSexo = () => {
             options={{
                 rotation: 180
             }}
-            className='pequeño'
         />
     )
 }
