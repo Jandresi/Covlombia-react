@@ -3,6 +3,7 @@ import './general.css';
 import GraficoRecuperados from './GraficoRecuperados';
 import GraficoFechas from './GraficoFechas';
 import GraficoSexo from './GraficoSexo';
+import GraficoEdades from './GraficoEdades';
 
 const General = () => {
     return (
@@ -16,13 +17,9 @@ const General = () => {
                     <h3 className="card-title text-center">Sexo</h3>
                     <GraficoSexo />
                 </div>
-                <div className="card mt-3 pequeño">
-                    <h3 className="card-title text-center">Sexo</h3>
-                    <GraficoSexo />
-                </div>
-                <div className="card mt-3 pequeño">
-                    <h3 className="card-title text-center">Sexo</h3>
-                    <GraficoSexo />
+                <div className="card mt-3 mediano">
+                    <h3 className="card-title text-center">Grupo etario</h3>
+                    <GraficoEdades />
                 </div>
             </div>
             <div className="card mt-3">
