@@ -8,27 +8,32 @@ const GraficoFechas = () => {
     let contarFecha = [];
     let contador = 1;
 
-
     const[data, setData] = React.useState([]);
     const [chartData, setChartData] = React.useState({
         datasets: []
     });
+    const[ejecutado, setEjecutado] = React.useState(false)
 
     useEffect(() => {
-        obtenerRecuperados();
-        ordenarFechas();
-    }, []);
-
-    const obtenerRecuperados = async() => {
+        obtenerFechas()
+        ordenarFechas()
+    }, [ejecutado]);
+ 
+    const obtenerFechas = async() => {
         const api = await fetch("https://www.datos.gov.co/resource/gt2j-8ykr.json?$$app_token=JCZ5UeNFHiBVgpjn7xmoY4WKg&$limit=100000");
         const covid = await api.json();
         setData(covid);
+        setEjecutado(true);
     }
-    
+
     const ordenarFechas = () => {
         try {
             data.filter(res => {
-                fecha.push(res.fecha_de_notificaci_n);
+                let original = new Date((res.fecha_diagnostico));
+                let dia = `${original.getDate() < 10 ? "0" : ""}${original.getDate()}`;
+                let mes = `${(original.getMonth()+1) < 10 ? "0" : ""}${original.getMonth()+1}`;
+                let year = original.getFullYear();
+                fecha.push(`${year}-${mes}-${dia}`);
             });
             fecha.sort();
             for (let i = 0; i < fecha.length; i++) {
@@ -40,7 +45,6 @@ const GraficoFechas = () => {
                     contador = 1;
                 }
             }
-            // eslint-disable-next-line no-undef
             setChartData({
                 labels: nombresFecha,
                 datasets: [{
@@ -54,6 +58,7 @@ const GraficoFechas = () => {
             console.log(e);
         }
     }
+    
 
     return (
         <Chart

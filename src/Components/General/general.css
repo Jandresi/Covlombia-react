@@ -32,10 +32,16 @@
 }
 
 #porFechas {
-    max-height: 500px;
+    max-height: 400px;
 }
 
-#graficoSexo {
-    max-width: 30%;
-    max-height: 500px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    margin-left: 5%;
+}
+
+.pequeño {
+    margin: 1em 3%;
+    max-width: 400px;
 }

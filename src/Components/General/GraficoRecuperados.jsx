@@ -13,7 +13,6 @@ const GraficoRecuperados = () => {
 
     useEffect(() => {
         obtenerRecuperados();
-        ordenarRecuperados();
     }, []);
 
     const obtenerRecuperados = async() => {
@@ -44,6 +43,7 @@ const GraficoRecuperados = () => {
 
     return (
         <div className="tarjetasIniciales">
+            {ordenarRecuperados()}
             <div className="recuperado bien">
                 <p className="tituloRecuperado">Recuperados</p>
                 <p className="cifra" id="recuperados">{contarRecuperado[2]}</p>
@@ -56,4 +56,4 @@ const GraficoRecuperados = () => {
     )
 }
 
-export default GraficoRecuperados
+export default GraficoRecuperados;

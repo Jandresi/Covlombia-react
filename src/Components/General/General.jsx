@@ -1,20 +1,34 @@
 import React from 'react'
 import './general.css';
-import GraficoFechas from './GraficoFechas';
 import GraficoRecuperados from './GraficoRecuperados';
+import GraficoFechas from './GraficoFechas';
+import GraficoSexo from './GraficoSexo';
 
 const General = () => {
     return (
-        <div>
-        <h1 className="text-center">SITUACIÓN GENERAL</h1>
+        <div className='container-fluid'>
+            <h1 className="text-center m-2">SITUACIÓN GENERAL</h1>
 
-        <GraficoRecuperados />
+            <GraficoRecuperados />
 
-        <div className="card mt-3">
-            <h3 className="card-title text-center">Casos positivos por fecha</h3>
-            <GraficoFechas />
-        </div>
-        <canvas id="graficoSexo"></canvas>
+            <div className="grid">
+                <div className="card mt-3 pequeño">
+                    <h3 className="card-title text-center">Sexo</h3>
+                    <GraficoSexo />
+                </div>
+                <div className="card mt-3 pequeño">
+                    <h3 className="card-title text-center">Sexo</h3>
+                    <GraficoSexo />
+                </div>
+                <div className="card mt-3 pequeño">
+                    <h3 className="card-title text-center">Sexo</h3>
+                    <GraficoSexo />
+                </div>
+            </div>
+            <div className="card mt-3">
+                <h3 className="card-title text-center">Casos positivos por fecha</h3>
+                <GraficoFechas />
+            </div>
         </div>
     )
 }
