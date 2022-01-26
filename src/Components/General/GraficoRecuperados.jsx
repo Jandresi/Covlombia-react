@@ -16,7 +16,7 @@ const GraficoRecuperados = () => {
     }, []);
 
     const obtenerRecuperados = async() => {
-        const api = await fetch("https://www.datos.gov.co/resource/gt2j-8ykr.json?$$app_token=JCZ5UeNFHiBVgpjn7xmoY4WKg&$limit=100000");
+        const api = await fetch("https://www.datos.gov.co/resource/gt2j-8ykr.json?$$app_token=JCZ5UeNFHiBVgpjn7xmoY4WKg&$limit=100000&$select=recuperado");
         const covid = await api.json();
         setData(covid);
     }

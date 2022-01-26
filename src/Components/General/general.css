@@ -48,21 +48,28 @@
     justify-content: space-around;
     flex-wrap: wrap;
     margin-left: 2%;
+    max-height: 400px;
 }
 
 .pequeño {
-    margin: 1em 3%;
-    min-width: 30%;
+    min-width: 32%;
+    max-height: max-content;
 }
 
 .mediano {
     min-width: 60%;
 }
 
-#porFechas {
-    min-height: 300px;
+#porSexo {
+    max-height: 80%;
 }
 
 #porEdades {
     min-height: 250px;
+    max-height: 75%;
+}
+
+#porFechas{
+    min-height: 300px;
+    max-height: 400px;
 }

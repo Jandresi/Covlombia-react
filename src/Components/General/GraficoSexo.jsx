@@ -18,7 +18,7 @@ const GraficoSexo = () => {
     }, [ejecutado]);
  
     const obtenerFechas = async() => {
-        const api = await fetch("https://www.datos.gov.co/resource/gt2j-8ykr.json?$$app_token=JCZ5UeNFHiBVgpjn7xmoY4WKg&$limit=100000");
+        const api = await fetch("https://www.datos.gov.co/resource/gt2j-8ykr.json?$$app_token=JCZ5UeNFHiBVgpjn7xmoY4WKg&$limit=100000&$select=sexo");
         const covid = await api.json();
         setData(covid);
         setEjecutado(true);
@@ -61,8 +61,10 @@ const GraficoSexo = () => {
             type='doughnut'
             data={chartData}
             options={{
-                rotation: 180
+                rotation: 180,
+                responsive: true,
             }}
+            id='porSexo'
         />
     )
 }

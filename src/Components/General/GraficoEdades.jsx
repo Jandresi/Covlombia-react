@@ -4,7 +4,7 @@ import { Chart } from 'react-chartjs-2';
 
 const GraficoEdades = () => {
     let edades = ["0 a 5 años", "6 a 11 años", "12 a 18 años", "19 a 26 años", "27 a 59 años", "Mayor de 60"];
-    let nombreEdades = ["Bebés", "Infantes", "Adolescentes", "Jóvenes", "Adultos", "Adultos mayores"];
+    //let nombreEdades = ["Bebés", "Infantes", "Adolescentes", "Jóvenes", "Adultos", "Adultos mayores"];
     let contarEdad = [0, 0, 0, 0, 0, 0];
 
     const[data, setData] = React.useState([]);
@@ -19,7 +19,7 @@ const GraficoEdades = () => {
     }, [ejecutado]);
  
     const obtenerEdades = async() => {
-        const api = await fetch("https://www.datos.gov.co/resource/gt2j-8ykr.json?$$app_token=JCZ5UeNFHiBVgpjn7xmoY4WKg&$limit=100000");
+        const api = await fetch("https://www.datos.gov.co/resource/gt2j-8ykr.json?$$app_token=JCZ5UeNFHiBVgpjn7xmoY4WKg&$limit=100000&$select=edad");
         const covid = await api.json();
         setData(covid);
         setEjecutado(true);
