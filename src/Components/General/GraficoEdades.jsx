@@ -3,7 +3,7 @@ import 'chart.js/auto';
 import { Chart } from 'react-chartjs-2';
 
 const GraficoEdades = () => {
-    let edades = ["0 a 5 años", "6 a 11 años", "12 a 18 años", "19 a 26 años", "27 a 59 años", "Mayor de 60"];
+    let edades = ["Bebés (0-5)", "Infantes (6-11)", "Adolesc. (12-18)", "Jóvenes (19-26)", "Adultos (27-59)", "Mayores de 60"];
     //let nombreEdades = ["Bebés", "Infantes", "Adolescentes", "Jóvenes", "Adultos", "Adultos mayores"];
     let contarEdad = [0, 0, 0, 0, 0, 0];
 
@@ -45,7 +45,7 @@ const GraficoEdades = () => {
             setChartData({
                 labels: edades,
                 datasets: [{
-                    label: "Grupo etario",
+                    label: "Casos",
                     data: contarEdad,
                     backgroundColor: [
                         'rgba(129, 212, 238, 1)',

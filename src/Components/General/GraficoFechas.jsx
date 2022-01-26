@@ -30,10 +30,10 @@ const GraficoFechas = () => {
         try {
             data.filter(res => {
                 let original = new Date((res.fecha_diagnostico));
-                let dia = `${original.getDate() < 10 ? "0" : ""}${original.getDate()}`;
+                //let dia = `${original.getDate() < 10 ? "0" : ""}${original.getDate()}`;
                 let mes = `${(original.getMonth()+1) < 10 ? "0" : ""}${original.getMonth()+1}`;
                 let year = original.getFullYear();
-                fecha.push(`${year}-${mes}-${dia}`);
+                fecha.push(`${year}-${mes}`);
             });
             fecha.sort();
             for (let i = 0; i < fecha.length; i++) {
