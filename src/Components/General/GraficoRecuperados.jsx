@@ -50,7 +50,7 @@ const GraficoRecuperados = () => {
             </div>
             <div className="recuperado mal">
                 <p className="tituloRecuperado">Fallecidos</p>
-                <p className="cifra" id="fallecidos">{contarRecuperado[0]}</p>
+                <p className="cifra" id="fallecidos">{contarRecuperado[0]+contarRecuperado[1]}</p>
             </div>
         </div>
     )
