@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Covlombia-react/static/css/main.632b1841.css",
-    "main.js": "/Covlombia-react/static/js/main.808098cd.js",
+    "main.js": "/Covlombia-react/static/js/main.f62b4eb9.js",
     "index.html": "/Covlombia-react/index.html",
     "main.632b1841.css.map": "/Covlombia-react/static/css/main.632b1841.css.map",
-    "main.808098cd.js.map": "/Covlombia-react/static/js/main.808098cd.js.map"
+    "main.f62b4eb9.js.map": "/Covlombia-react/static/js/main.f62b4eb9.js.map"
   },
   "entrypoints": [
     "static/css/main.632b1841.css",
-    "static/js/main.808098cd.js"
+    "static/js/main.f62b4eb9.js"
   ]
 }
