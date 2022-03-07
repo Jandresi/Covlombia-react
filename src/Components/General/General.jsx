@@ -9,8 +9,7 @@ const General = () => {
     return (
         <div className='container-fluid contenedor'>
             <h2 className="text-center m-2">SITUACIÓN GENERAL</h2>
-            <p id='explicacion'>Gráficos realizados con los primeros 100.000 datos registrados en la api SODA del gobierno
-            <br />Visualizar esta web preferiblemente en modo escritorio</p>
+            <p id='explicacion'>Gráficos realizados con los primeros 500.000 datos registrados en la api SODA del gobierno</p>
 
             <GraficoRecuperados />
 

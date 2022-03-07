@@ -19,7 +19,7 @@ const GraficoEdades = () => {
     }, [ejecutado]);
  
     const obtenerEdades = async() => {
-        const api = await fetch("https://www.datos.gov.co/resource/gt2j-8ykr.json?$$app_token=JCZ5UeNFHiBVgpjn7xmoY4WKg&$limit=100000&$select=edad");
+        const api = await fetch("https://www.datos.gov.co/resource/gt2j-8ykr.json?$$app_token=JCZ5UeNFHiBVgpjn7xmoY4WKg&$limit=500000&$select=edad");
         const covid = await api.json();
         setData(covid);
         setEjecutado(true);

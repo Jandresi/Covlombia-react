@@ -18,7 +18,7 @@ const GraficoSexo = () => {
     }, [ejecutado]);
  
     const obtenerFechas = async() => {
-        const api = await fetch("https://www.datos.gov.co/resource/gt2j-8ykr.json?$$app_token=JCZ5UeNFHiBVgpjn7xmoY4WKg&$limit=100000&$select=sexo");
+        const api = await fetch("https://www.datos.gov.co/resource/gt2j-8ykr.json?$$app_token=JCZ5UeNFHiBVgpjn7xmoY4WKg&$limit=500000&$select=sexo");
         const covid = await api.json();
         setData(covid);
         setEjecutado(true);
@@ -33,8 +33,9 @@ const GraficoSexo = () => {
                     sexo[1]++;
                 }
             });
-            porcentajes[0] = `M(${Math.round(sexo[0]/1000)}%)`
-            porcentajes[1] = `F(${Math.round(sexo[1]/1000)}%)`
+            let total = sexo[0] + sexo[1];
+            porcentajes[0] = `M(${Math.round((sexo[0]*100)/total)}%)`
+            porcentajes[1] = `F(${Math.round((sexo[1]*100)/total)}%)`
             setChartData({
                 labels: porcentajes,
                 datasets: [{
